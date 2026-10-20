@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trainer Cyrus Repaso | Personal Website</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="intro" role="button" tabindex="0" aria-label="Start">
+  <div class="ball"></div>
+  <p class="px" id="introText"></p>
+  <small>Click anywhere to skip</small>
+</div>
+
+<header>
+  <nav>
+    <a href="#me">Trainer</a><a href="#stats">Stats</a><a href="#battle">Battle</a><a href="#bag">Bag</a><a href="#dex">Pokédex</a><a href="#catch">Catch</a>
+  </nav>
+  <div class="badges" id="badges" title="Explore the page to earn all 5 badges"><span>Badges</span>
+    <i data-k="stats">🪨</i><i data-k="win">💧</i><i data-k="bag">⚡</i><i data-k="dex">🌈</i><i data-k="catch">🔥</i>
+  </div>
+</header>
+
+<main>
+  <section id="me">
+    <div class="card">
+      <button class="btn shiny" id="shiny">✨ Shiny</button>
+      <label class="photo" id="photoBox" tabindex="0">
+        <img id="photo" src="me.jpg" alt="Photo of Cyrus Repaso">
+        <input type="file" accept="image/*" id="file" hidden>
+      </label>
+      <div>
+        <p class="lv px">Trainer class: Programmer</p>
+        <h1>Cyrus Repaso</h1>
+        <div class="types">
+          <span class="t" style="background:#f85888">PSYCHIC</span>
+          <span class="t" style="background:#d8b010">ELECTRIC</span>
+        </div>
+        <p class="bio">Introverted tech enthusiast who keeps stepping out of his comfort zone to grow and collaborate.</p>
+        <div class="hp">Social Battery <span id="batN"></span><div class="bar"><b id="bat"></b></div></div>
+        <div class="hp">Curiosity<div class="bar"><b id="cur" style="background:#4aa3ff"></b></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats">
+    <h2>Base stats</h2>
+    <div class="panel" id="statList"></div>
+  </section>
+
+  <section id="battle">
+    <h2>Battle: Cyrus vs. the wild bug</h2>
+    <div class="panel">
+      <div class="arena">
+        <div class="foe" id="foe">
+          <div class="em" aria-hidden="true">🐛</div>
+          <b>Wild BUG Lv.99</b>
+          <div class="bar"><b id="foeHp" style="width:100%;background:var(--red)"></b></div>
+        </div>
+        <div class="moves" id="moves"></div>
+      </div>
+      <div id="say" aria-live="polite">Pick a move (one of my skills) to squash the bug!</div>
+    </div>
+  </section>
+
+  <section id="bag">
+    <h2>Bag: my hobbies</h2>
+    <div class="panel">
+      <div class="bag" id="bagList"></div>
+      <p id="bagSay" class="bagsay" aria-live="polite">Tap an item to use it.</p>
+    </div>
+  </section>
+
+  <section id="dex">
+    <h2>Pokédex entry</h2>
+    <div class="panel dexcard">
+      <div class="dexart" aria-hidden="true">🧑‍💻</div>
+      <div>
+        <h3 class="px">Cyrus Repaso, the Quiet Coder</h3>
+        <p class="meta"><b>Nature:</b> Introverted &nbsp; <b>Ability:</b> Rapid Adaptation &nbsp; <b>Hidden ability:</b> Growth Mindset</p>
+        <p id="dexText" class="dextext"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="catch">
+    <h2>Catch a hidden trait</h2>
+    <div class="panel catch">
+      <button id="cball" aria-label="Throw Poké Ball">🔴</button>
+      <p class="px" style="font-size:11px" id="catchMsg">Tap the ball to throw it!</p>
+      <p id="fact"></p>
+    </div>
+  </section>
+</main>
+<footer>Made by Cyrus Repaso with HTML, CSS &amp; JavaScript. Gotta learn ’em all!</footer>
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
